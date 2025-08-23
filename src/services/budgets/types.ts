@@ -13,3 +13,4 @@ export interface BudgetsRepository {
 	update(id: string | number, budget: Omit<Budget, 'id'>): Promise<Budget>;
 	delete(id: string | number): Promise<void>;
 }
+

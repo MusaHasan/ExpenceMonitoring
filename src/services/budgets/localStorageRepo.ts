@@ -45,3 +45,4 @@ export const localStorageRepo: BudgetsRepository = {
 		write(data);
 	},
 };
+

@@ -31,3 +31,4 @@ export const apiRepo: BudgetsRepository = {
 		await http<void>(`/budgets/${id}`, { method: 'DELETE' });
 	},
 };
+
