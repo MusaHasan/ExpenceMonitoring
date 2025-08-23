@@ -1,0 +1,17 @@
+{
+	"expenses": [
+		{ "id": 1, "name": "jghg", "amount": 600, "date": "August 20, 2025" },
+		{ "id": 2, "name": "Buy Pant", "amount": 700, "date": "August 20, 2025" },
+		{ "id": 3, "name": "Buy Shirt", "amount": 500, "date": "August 20, 2025" },
+		{ "id": 4, "name": "Buy water", "amount": 500, "date": "August 20, 2025" },
+		{ "id": 5, "name": "Buy meet", "amount": 230, "date": "August 20, 2025" },
+		{ "id": 6, "name": "Buy Rice", "amount": 230, "date": "August 20, 2025" },
+		{ "id": 7, "name": "Traveling Office", "amount": 1050, "date": "August 19, 2025" },
+		{ "id": 8, "name": "Traveling Home", "amount": 1050, "date": "August 19, 2025" }
+	],
+	"budgets": [
+		{ "id": 1, "name": "Transport", "icon": "🚌", "total": 5000, "spent": 2100, "items": 2 },
+		{ "id": 2, "name": "Food", "icon": "🍔", "total": 5000, "spent": 960, "items": 3 },
+		{ "id": 3, "name": "Clothings", "icon": "👕", "total": 4000, "spent": 1800, "items": 3 }
+	]
+}
