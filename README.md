@@ -179,16 +179,42 @@ The application supports both local storage and API modes:
 
 ## 🚀 Deployment
 
-### Build for Production
+### Quick Deployment Options
+
+#### Option 1: GitHub Pages (Recommended)
+1. **Automatic Deployment** (using GitHub Actions):
+   - Push your code to the `main` or `master` branch
+   - The GitHub Actions workflow (`.github/workflows/deploy.yml`) will automatically build and deploy
+   - Go to your repository Settings → Pages → Set source to "GitHub Actions"
+
+2. **Manual Deployment**:
+   ```bash
+   # Run the deployment script
+   chmod +x deploy.sh
+   ./deploy.sh
+   ```
+
+#### Option 2: Vercel (One-click deployment)
+1. Install Vercel CLI: `npm i -g vercel`
+2. Run: `vercel --prod`
+3. Or connect your GitHub repository to Vercel for automatic deployments
+
+#### Option 3: Netlify
+1. Drag and drop the `dist` folder to Netlify
+2. Or connect your GitHub repository to Netlify
+3. The `netlify.toml` file will configure the build settings automatically
+
+#### Option 4: Manual Build
 ```bash
 npm run build
 ```
+The built files will be in the `dist/` directory, ready for deployment to any static hosting service.
 
-The built files will be in the `dist/` directory, ready for deployment to any static hosting service like:
-- Netlify
-- Vercel
-- GitHub Pages
-- AWS S3
+### Deployment Files Included
+- `.github/workflows/deploy.yml` - GitHub Actions workflow
+- `deploy.sh` - Manual deployment script
+- `vercel.json` - Vercel configuration
+- `netlify.toml` - Netlify configuration
 
 ### Environment Variables
 Currently, the application doesn't require environment variables, but you can add them in the `vite.config.ts` file if needed.
