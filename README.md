@@ -30,6 +30,7 @@ Before running this application, make sure you have the following installed:
 - **npm** (comes with Node.js)
 
 You can check your Node.js version by running:
+
 ```bash
 node --version
 npm --version
@@ -55,18 +56,23 @@ npm install
 You have several options to run the application:
 
 #### Option A: Run Frontend Only (with Local Storage)
+
 ```bash
 npm run dev
 ```
+
 This will start the Vue application on `http://localhost:5173`
 
 #### Option B: Run with Mock API Server
+
 ```bash
 npm run dev:all
 ```
+
 This will start both the Vue application and the JSON Server API on port 3001
 
 #### Option C: Run API Server Separately
+
 ```bash
 # Terminal 1 - Start API server
 npm run api
@@ -122,21 +128,25 @@ ExpenceManagement/
 ## 🎯 Usage Guide
 
 ### Dashboard
+
 - View overall spending summary
 - See budget progress with visual indicators
 - Quick access to recent expenses
 
 ### Budgets
+
 - View all created budgets
 - See spending progress for each budget
 - Click on a budget to view detailed breakdown
 
 ### Expenses
+
 - Add new expenses with name, amount, and date
 - View all expenses in a list format
 - Edit or delete existing expenses
 
 ### Navigation
+
 - Use the sidebar to navigate between different sections
 - Toggle sidebar collapse/expand for more screen space
 - Responsive design adapts to different screen sizes
@@ -144,18 +154,21 @@ ExpenceManagement/
 ## 🔧 Configuration
 
 ### API Configuration
+
 The application supports both local storage and API modes:
 
 - **Local Storage Mode**: Data persists in browser's local storage
 - **API Mode**: Uses JSON Server for data persistence
 
 ### Port Configuration
+
 - **Frontend**: Runs on port 5173 (configurable in `vite.config.ts`)
 - **API Server**: Runs on port 3001 (configurable in `package.json`)
 
 ## 📊 Data Structure
 
 ### Budget Object
+
 ```typescript
 {
   id: number;
@@ -168,6 +181,7 @@ The application supports both local storage and API modes:
 ```
 
 ### Expense Object
+
 ```typescript
 {
   id: number;
@@ -179,10 +193,35 @@ The application supports both local storage and API modes:
 
 ## 🚀 Deployment
 
+# ExpenceManagement.Api
+
+ASP.NET Core 9 Web API for Budgets and Expenses with EF Core (SQLite).
+
+## Run
+
+```bash
+cd AspNetApi
+
+dotnet build
+
+dotnet run
+```
+
+Swagger UI: http://localhost:5000/swagger or http://localhost:8080/swagger (port varies)
+
+## Endpoints
+
+- Budgets: `GET/POST/PUT/DELETE /api/budgets`
+- Expenses: `GET/POST/PUT/DELETE /api/expenses`
+
+The app creates `expence.db` automatically on first run.
+
 ### Quick Deployment Options
 
 #### Option 1: GitHub Pages (Recommended)
+
 1. **Automatic Deployment** (using GitHub Actions):
+
    - Push your code to the `main` or `master` branch
    - The GitHub Actions workflow (`.github/workflows/deploy.yml`) will automatically build and deploy
    - Go to your repository Settings → Pages → Set source to "GitHub Actions"
@@ -195,28 +234,34 @@ The application supports both local storage and API modes:
    ```
 
 #### Option 2: Vercel (One-click deployment)
+
 1. Install Vercel CLI: `npm i -g vercel`
 2. Run: `vercel --prod`
 3. Or connect your GitHub repository to Vercel for automatic deployments
 
 #### Option 3: Netlify
+
 1. Drag and drop the `dist` folder to Netlify
 2. Or connect your GitHub repository to Netlify
 3. The `netlify.toml` file will configure the build settings automatically
 
 #### Option 4: Manual Build
+
 ```bash
 npm run build
 ```
+
 The built files will be in the `dist/` directory, ready for deployment to any static hosting service.
 
 ### Deployment Files Included
+
 - `.github/workflows/deploy.yml` - GitHub Actions workflow
 - `deploy.sh` - Manual deployment script
 - `vercel.json` - Vercel configuration
 - `netlify.toml` - Netlify configuration
 
 ### Environment Variables
+
 Currently, the application doesn't require environment variables, but you can add them in the `vite.config.ts` file if needed.
 
 ## 🤝 Contributing
@@ -236,6 +281,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ### Common Issues
 
 1. **Port Already in Use**
+
    ```bash
    # Kill process on port 5173
    npx kill-port 5173
@@ -244,6 +290,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
    ```
 
 2. **Node Modules Issues**
+
    ```bash
    rm -rf node_modules package-lock.json
    npm install
@@ -258,6 +305,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ### Getting Help
 
 If you encounter any issues:
+
 1. Check the browser console for errors
 2. Ensure all dependencies are installed correctly
 3. Verify that both frontend and API servers are running (if using API mode)
