@@ -14,3 +14,5 @@ export interface BudgetsRepository {
 	delete(id: string | number): Promise<void>;
 }
 
+
+
