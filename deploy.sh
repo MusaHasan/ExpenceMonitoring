@@ -70,3 +70,5 @@ esac
 echo ""
 echo "🎉 Deployment script completed!"
 echo "📁 Your built files are ready in the 'dist' directory"
+
+
